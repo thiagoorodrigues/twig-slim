@@ -1,0 +1,29 @@
+{% extends 'master.html.twig' %}
+
+{% block master %}
+	<h2>Cadastro - Sistema de Validação</h2>
+
+	<hr/>
+
+	<form action="/cadastro/store" method="post" novalidate>
+		<div class="form-group">
+			<label for="name">Name</label>
+			<input type="text" class="form-control" id="name" name="name" required/>
+			{{message('name')}}
+		</div>
+
+		<div class="form-group">
+			<label for="email">E-mail</label>
+			<input type="text" class="form-control" id="email" name="email" required/>
+			{{message('email')}}
+		</div>
+
+		<div class="form-group">
+			<label for="phone">Telefone</label>
+			<input type="text" class="form-control" id="phone" name="phone" required/>
+			{{message('phone')}}
+		</div>
+
+		<button type="submit" class="btn btn-primary">Cadastrar</button>
+	</form>
+{% endblock %}

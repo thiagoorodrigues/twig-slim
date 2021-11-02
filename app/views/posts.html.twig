@@ -1,0 +1,20 @@
+{% extends "master.html.twig" %}
+
+{% block master %}
+    <h2>Posts</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>Id</th>
+        <th>Title</th>        
+    </tr>
+
+    {% for post in posts %}
+        <tr>
+            <th>{{post.id}}</th>
+            <th>{{post.title}}</th>        
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
